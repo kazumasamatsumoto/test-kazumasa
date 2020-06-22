@@ -8,7 +8,8 @@
                 <div class="card-header">ブックマーク登録</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('bookmarks.store') }}" >
+                    <form method="POST" action="{{ route('bookmarks.update', $bookmark) }}" >
+                        @method('PUT')
                         @csrf
                         @include('bookmarks.fields')
                     </form>
